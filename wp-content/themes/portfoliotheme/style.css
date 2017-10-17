@@ -1,0 +1,333 @@
+#color-pallet-options {
+    color: #c9c9c9;  /* gray */
+    color: #e3e3e3;  /* lightest */ 
+    color: #9ad3de;  /* lighter blue */
+    color: #89bdd3;  /* richer light blue */  
+}
+
+/* font-family: 'Nothing You Could Do', cursive; */
+/* font-family: 'Ledger', serif; */
+
+html {
+    background-color: #c9c9c9;
+}
+
+body {   
+    color: #ffffff;
+    font-family: 'Ledger', serif;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: 1px 1px #a2a2a2;
+}
+
+header.site-header {
+    background-color: #9ad3de;
+    width: 100%;
+    height: 100px;
+}
+
+#site-navigation {
+    display: inline-block;
+    float: right;
+}
+    
+.site-branding {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    font-size: 0.75em;
+    padding-right: 15%;
+}
+
+.site-branding h1 {
+    font-size: 1.75em;
+}
+
+.site-wrapper {
+    padding: 5px;
+}
+
+.styled-separator {
+    width: 100%;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.styled-seperator-0 {
+    background-image: url(images/sep1.png);
+}
+
+.styled-seperator-1 {
+    background-image: url(images/sep2.png);
+}
+
+.styled-seperator-2 {
+    background-image: url(images/sep3.png);
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+/*	float: left;*/
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+
+#menuToggle {
+    display: inline-block;
+    float: right;
+    position: relative;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    top: 15px;
+    right: 15px;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    float: right;  
+    -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #e3e3e3;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+/*              opacity 0.55s ease;*/
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #e3e3e3;
+    top: -14px;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+    transform: rotate(-45deg) translate(0, -1px);
+    top: 12px;
+}
+
+
+#menuToggle input:checked { 
+    z-index: 10;
+    position: fixed;
+}
+
+.nav-opened {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #9ad3de;
+    z-index: 10;
+    text-align: center;
+    font-size: 25px;    
+}
+
+.nav-opened ul {
+    display: inline-block;
+    margin-top: 50%;
+}
+
+.nav-opened ul li {
+    margin-top: 25px;
+}
+
+@media screen and (min-width: 765px) {
+
+    .site-branding {
+        position: absolute;
+        top: 0px;
+        left: 5px;
+        font-size: 1em;
+        padding: 0px;
+    }    
+    
+    .site-branding h1 {
+        font-size: 2.25em;
+    }
+
+    
+	#menuToggle {
+		display: none;
+	}
+    
+	.main-navigation ul {
+		display: block;
+	}
+    
+    html, body {
+        padding: 0px;
+        margin: 0px;
+        height: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header.site-header {
+        position: fixed;
+        height: 100%;
+        width: 200px;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */    
+        padding: 15px;
+        box-shadow: 0px 0px 3px black;
+    }
+
+    header a {
+        text-decoration: none;   
+    }
+
+    .site-wrapper {
+        display: inline-block;
+        min-height: 100%;
+        margin-left: 200px;
+        width: 100%;
+        width: -moz-available;
+        width: -webkit-fill-available;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */   
+        padding: 0px 15px;
+        text-align: center;
+    }
+
+    #site-navigation {
+        display: inline-block;
+        float: left;
+    }
+
+    .site-branding {
+        position: relative;
+    }    
+    
+}

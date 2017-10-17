@@ -1,0 +1,22 @@
+#color-pallet-options {
+    color: #c9c9c9;  /* gray */
+    color: #e3e3e3;  /* lightest */ 
+    color: #9ad3de;  /* lighter blue */
+    color: #89bdd3;  /* richer light blue */  
+}
+
+/* font-family: 'Nothing You Could Do', cursive; */
+/* font-family: 'Ledger', serif; */
+
+body {   
+    color: #ffffff;
+    font-family: 'Ledger', serif;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: 1px 1px #a2a2a2;
+}
+
