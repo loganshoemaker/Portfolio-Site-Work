@@ -36,25 +36,36 @@
                 <h1>Projects</h1>
             
                 <div class="styled-separator styled-seperator-1"></div>
-
-            </div>    
                 
+            </div>          
+                           
             <?php
                 $projects = get_posts(array(
                 'post-type' => 'post',
                 'category'  => '9'
             ));
+             
+            $num = 1;?>
+            
 
-            foreach ($projects as $post) : setup_postdata($post);?>
-                
-                <a href="<?php the_permalink(); ?>">
-                    <div class="project">
-                        <span class="item-title"><?php the_title(); ?></span><br>
-                        <div class="portfolio-image-container" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post_id, 'medium' ); ?>" class="project-featured-image"></div>
-                    </div>    
-                </a>    
+            <a href="#portfolio-id-1" class="next"></a>   
+                    
+            <?php $count = count($projects); ?>
+            
+            <?php foreach ($projects as $post) : setup_postdata($post);?>
+            
+                <article class="project" id="portfolio-id-<?php echo $num; ?>" style="background-image: url(<?php echo get_field('background-image'); ?>)">
+                    <span class="item-title"><?php the_title(); ?></span><br>
+                    <div class="portfolio-image-container" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post_id, 'medium' ); ?>" class="project-featured-image"></div>
+                </article>  
 
+                <?php $num = $num + 1; ?>
+
+                <a href="#portfolio-id-<?php echo $num; ?>" class="next next-article"></a> 
+            
             <?php endforeach;?>
+            
+            <a href="#" class="next"></a>              
             
         </section>    
       
