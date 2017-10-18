@@ -1,12 +1,9 @@
-.home-intro-content {
-    text-transform: none;
-    font-family: 'Nothing You Could Do', cursive;
-}
-
 .home-category-page {
     margin: 100px 0px;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%); 
+    text-align: center;
+    font-family: 'Nothing You Could Do', cursive;    
 }
 
 .home-category-page:hover {
@@ -30,7 +27,7 @@
     height: 125px;
     margin: 35px auto;
     border-radius: 50%;
-    box-shadow: 0px 2px 25px -4px gray;   
+    box-shadow: 0px 2px 25px -4px #000000;   
 }
 
 
@@ -39,6 +36,7 @@
     .home-category-page {
         display: inline-block;
         width: 25%;
+        text-align: center;
     }
     
 }
@@ -51,3 +49,4 @@
     }
     
 }
+

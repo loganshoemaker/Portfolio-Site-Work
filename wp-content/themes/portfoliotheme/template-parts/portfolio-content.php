@@ -4,7 +4,7 @@
  *
  * @package PortfolioTheme
  */
-    wp_enqueue_style( 'resume-style', get_template_directory_uri() . '/resume-styles.css' );
+    wp_enqueue_style( 'resume-style', get_template_directory_uri() . '/portfolio-styles.css' );
 ?>
 
 
@@ -31,35 +31,42 @@
         
         <section id="projects">
             
-            <h1>Projects</h1>
-            <div class="styled-separator styled-seperator-1"></div>
+            <div class="section-title">
 
+                <h1>Projects</h1>
+            
+                <div class="styled-separator styled-seperator-1"></div>
+
+            </div>    
+                
             <?php
                 $projects = get_posts(array(
                 'post-type' => 'post',
-                'category'  => '8'
+                'category'  => '9'
             ));
 
             foreach ($projects as $post) : setup_postdata($post);?>
                 
-                <div class="project">
-                    <span class="item-title"><?php the_title(); ?></span>
-                    <?php the_content(); ?>
-                    <span>Skills Used: <?php echo get_field('skills_used'); ?></span>
-                </div>    
+                <a href="<?php the_permalink(); ?>">
+                    <div class="project">
+                        <span class="item-title"><?php the_title(); ?></span><br>
+                        <div class="portfolio-image-container" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post_id, 'medium' ); ?>" class="project-featured-image"></div>
+                    </div>    
+                </a>    
 
             <?php endforeach;?>
             
         </section>    
       
         <!-- Positions Section -->
+        
+    <?php /*    
         <section id="positions">
             
             <h1>Positions</h1>
             <div class="styled-separator styled-seperator-1"></div>
             
             <?php
-                /* Get posts and order by custom field (start_date) */
                 $positions = get_posts(array(
                 'post_type'			=> 'post',
                 'category'          => 7,
@@ -89,6 +96,7 @@
             <?php endforeach; ?> 
             
         </section>
+    */ ?>
         
     </div>
     

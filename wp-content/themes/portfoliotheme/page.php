@@ -24,6 +24,10 @@ get_header(); ?>
             
                     get_template_part('template-parts/resume-content','page');
                     
+                } elseif (is_page('Portfolio')) {
+            
+                    get_template_part('template-parts/portfolio-content', 'page');
+                    
                 } else {
 
                     get_template_part( 'template-parts/content', 'page' );
