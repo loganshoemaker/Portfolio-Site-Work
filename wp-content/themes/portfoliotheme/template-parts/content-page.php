@@ -6,48 +6,27 @@
  *
  * @package PortfolioTheme
  */
-
+    wp_enqueue_style( 'page-style', get_template_directory_uri() . '/page-style.css' );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+    
+    <section id="projects">
 
-	<div class="entry-content">
+        <div class="section-title">
 
-        <?php
-			the_content();
-            
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'portfoliotheme' ),
-				'after'  => '</div>',
-			) );
-		?>
-  
+            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+            <div class="styled-separator styled-seperator-1"></div>
+
+        </div>   
+
+    </section>
+
+	<div class="content">
+
+        <?php the_content(); ?>
+
 	</div><!-- .entry-content -->
-<?php /*
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-				edit_post_link(
-					sprintf(
-						wp_kses( */ ?>
-<!--							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'portfoliotheme' ),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						get_the_title()
-					)
-//                    ,
-//					'<span class="edit-link">',
-//					'</span>'
-				);
-			?>
-		</footer><!-- .entry-footer -->
-<?php /*	<?php endif; ?> */ ?>
+
 </article><!-- #post-<?php the_ID(); ?> -->

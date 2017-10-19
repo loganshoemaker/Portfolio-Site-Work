@@ -13,12 +13,21 @@ section h1 {
     margin-bottom: 0px;
 }
 
+.content {
+    text-transform: none;
+    text-align: left;
+    margin: 65px 0px;
+}
+
 .project {
     position: relative;    
-    height: 100vh;
-    top: 100vh;    
-    padding: 25px 0px;
+    min-height: 100vh;
+    padding: 25px;
     background-size: cover;
+}
+
+.project:first-of-type {
+    margin-top: 50vh;    
 }
 
 .project {
@@ -27,104 +36,46 @@ section h1 {
 
 .next {
     display: inline-block;
-    background-color: #ffffff;
-    width: 50px;
-    height: 50px;
-    margin: auto;
+    width: 4em;
+    height: 4em;
+    border: 0.5em solid #ffffff;
+    border-radius: 50%;
     position: relative;
-    margin-top: 80vh;
+    margin-top: 15vh;
     cursor: pointer;
+    z-index: 15;
 }
 
-.next:first-of-type {
-    margin-top: 30vh;
-}
-
-a.next-article:last-child {
-
-}
-
-
-
-
-@media screen and (min-width: 765px) {
-    
-}
-
-/*
-.project {
-    margin: 20px auto;
-    width: 80%;
-    padding: 15px;
-    border-radius: 20px;    
-    background-color: #9ad3de;
-    color: #4c4c4c;
-    text-align: left;
-    box-shadow: 0px 0px 10px #2d2d2d;
-}
-
-.project .item-title {
-    width: 100%;
-    text-transform: none;
-    font-weight: bold;
-}
-
-.project img {
-    height: auto;
-}
-
-.portfolio-image-container {
-    height: 300px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-section h1 {
-    font-family: 'Nothing You Could Do', cursive;
-    margin-bottom: 0px;
-}
-
-.styled-separator {
-    background-position-x: left;
-}
-
-h1 {
-    font-size: 2em;
-}
-
-h2 {
-    font-size: 1.75em;
-}
-
-.section-title {
-    text-align: left;
-}
-
-.styled-separator {
-    background-image: url(images/sep2.png);
+.next:after {
+    content: '';
     display: inline-block;
-    background-position-x: 20px;
-    background-position-y: -10px;
+    margin-top: 0.6em;
+    width: 1.4em;
+    height: 1.4em;
+    border-top: 0.5em solid #ffffff;
+    border-right: 0.5em solid #ffffff;
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
 }
 
-@media screen and (min-width: 765px) {
-    .project {
-        display: inline-block;
-        width: 38%;
-        margin: 18px;
-    }
-    
-    .site-wrapper {
-        padding: 0px;
-    }
+.next-first {
+    margin-top: 25vh;
 }
 
-@media screen and (min-width: 1350px) {
-    .project {
-        width: 25%;
-        margin: 30px;
-    }   
+.next-last:after {
+    margin-top: 1.4em;    
+    border-top: 0.5em solid #ffffff;
+    border-right: 0.5em solid #ffffff;
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
-*/
+
+.next:hover{
+    border-color: #89bdd3;
+    box-shadow: 0px 0px 5px #58b3da;
+}
+.next:hover:after {
+    border-color: #89bdd3;
+}

@@ -28,30 +28,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-        
-        <section id="projects">
-            
-            <h1>Projects</h1>
-            <div class="styled-separator styled-seperator-1"></div>
 
-            <?php
-                $projects = get_posts(array(
-                'post-type' => 'post',
-                'category'  => '8'
-            ));
-
-            foreach ($projects as $post) : setup_postdata($post);?>
-                
-                <div class="project">
-                    <span class="item-title"><?php the_title(); ?></span>
-                    <?php the_content(); ?>
-                    <span>Skills Used: <?php echo get_field('skills_used'); ?></span>
-                </div>    
-
-            <?php endforeach;?>
-            
-        </section>    
-      
         <!-- Positions Section -->
         <section id="positions">
             
@@ -91,5 +68,5 @@
         </section>
         
     </div>
-    
+
 </article>

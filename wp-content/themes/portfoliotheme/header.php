@@ -8,7 +8,6 @@
  *
  * @package PortfolioTheme
  */
-
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -23,34 +22,20 @@
 </head>
 
 <body <?php body_class(); ?>>
-    
-<?php /*
-<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'portfoliotheme' ); ?></a>
-*/ ?>
+
 <header class="site-header">
 
     <nav id="site-navigation" class="main-navigation">
-        <!--
-        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'portfoliotheme' ); ?></button>
-        -->
+
         <div id="menuToggle">
-            <!--
-            A fake / hidden checkbox is used as click reciever,
-            so you can use the :checked selector on it.
-            -->
+
             <input type="checkbox" />
 
-            <!--
-            Some spans to act as a hamburger.
-
-            They are acting like a real hamburger,
-            not that McDonalds stuff.
-            -->
             <span></span>
             <span></span>
-            <span></span>   
+            <span></span> 
+            
         </div>
-        
         
         <?php
             wp_nav_menu( array(
@@ -58,15 +43,9 @@
                 'menu_id'        => 'primary-menu',
             ) );
         ?>
-    </nav><!-- #site-navigation -->
+    </nav>
     
-<!--
-    <canvas id="canvas">
-    
-    </canvas>
--->
-    
-</header><!-- #masthead -->    
+</header>
     
 <div class="site-wrapper">
 
@@ -82,9 +61,9 @@
 
         $description = get_bloginfo( 'description', 'display' );
         if ( $description || is_customize_preview() ) : ?>
-            <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+            <p class="site-description"><?php echo $description; ?></p>
         <?php
         endif; ?>
-    </div><!-- .site-branding -->    
+    </div>   
     
 	<div id="content" class="site-content">
