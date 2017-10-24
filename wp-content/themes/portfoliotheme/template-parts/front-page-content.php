@@ -15,7 +15,7 @@
 
 <?php if ( is_front_page() ) {
             // Front page stylesheet
-            wp_enqueue_style( 'front-page-style', get_template_directory_uri() . '/front-page-styles.css' );
+            wp_enqueue_style( 'front-page-style', get_template_directory_uri() . '/css/front-page-styles.css' );
         }
 ?>
 

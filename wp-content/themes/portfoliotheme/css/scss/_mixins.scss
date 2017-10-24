@@ -1,0 +1,24 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin sc700() {
+    @media screen and (min-width: 700px) {
+        @content;
+    }
+}
+
+@mixin sc765() {
+    @media screen and (min-width: 765px) {
+        @content;
+    }
+}
+
+@mixin sc1200(){
+    @media screen and (min-width: 1200px) {
+        @content;   
+    }
+}

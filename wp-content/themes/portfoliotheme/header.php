@@ -19,6 +19,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Ledger" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="http://www.logansshoemaker.com/wp-content/uploads/2017/10/glyphicon.png">
 </head>
 
 <body <?php body_class(); ?>>

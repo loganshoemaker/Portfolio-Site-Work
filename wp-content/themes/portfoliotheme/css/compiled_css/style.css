@@ -1,0 +1,32 @@
+/* colors */
+/* fonts */
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+body {
+  color: #ffffff; }
+
+@media screen and (min-width: 700px) {
+  #element {
+    -webkit-border-radius: 15;
+    -moz-border-radius: 15;
+    -ms-border-radius: 15;
+    border-radius: 15; } }
+
+@media screen and (min-width: 765px) {
+  #element {
+    -webkit-border-radius: 16;
+    -moz-border-radius: 16;
+    -ms-border-radius: 16;
+    border-radius: 16; } }
+
+@media screen and (min-width: 1200px) {
+  #element {
+    -webkit-border-radius: 17;
+    -moz-border-radius: 17;
+    -ms-border-radius: 17;
+    border-radius: 17; } }

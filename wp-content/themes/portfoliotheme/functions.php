@@ -117,7 +117,7 @@ add_action( 'widgets_init', 'portfoliotheme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function portfoliotheme_scripts() {
-	wp_enqueue_style( 'portfoliotheme-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'resume-style', get_template_directory_uri() . '/css/style.css' );
 
 	wp_enqueue_script( 'portfoliotheme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -127,6 +127,10 @@ function portfoliotheme_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
+
+
+
 add_action( 'wp_enqueue_scripts', 'portfoliotheme_scripts' );
 
 /**

@@ -6,7 +6,7 @@
  *
  * @package PortfolioTheme
  */
-    wp_enqueue_style( 'page-style', get_template_directory_uri() . '/page-style.css' );
+    wp_enqueue_style( 'page-style', get_template_directory_uri() . '/css/page-style.css' );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

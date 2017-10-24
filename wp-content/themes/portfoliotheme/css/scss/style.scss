@@ -1,0 +1,40 @@
+///* colors */
+//$white: #ffffff;
+//$black: #000000;
+//$lightblue: #89bdd3;
+//$offwhite: #e3e3e3;
+//$darkgrey: #4c4c4c;
+
+///* fonts */
+//$blocky: Arial, Helvetica, sans-serif;
+//$cursive: 'Nothing You Could Do', cursive;
+
+@import 'variables';
+@import 'reset';
+@import 'mixins';
+
+body {
+    color: $white;
+}
+
+#element {
+    
+}
+
+@include sc700 {
+    #element {
+        @include border-radius(15);
+    }
+}
+
+@include sc765 {
+    #element {
+        @include border-radius(16);
+    }
+}
+
+@include sc1200 {
+    #element {
+        @include border-radius(17);
+    }
+}

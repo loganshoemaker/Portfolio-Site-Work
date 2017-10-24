@@ -4,7 +4,7 @@
  *
  * @package PortfolioTheme
  */
-    wp_enqueue_style( 'resume-style', get_template_directory_uri() . '/portfolio-styles.css' );
+    wp_enqueue_style( 'resume-style', get_template_directory_uri() . '/css/portfolio-styles.css' );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
